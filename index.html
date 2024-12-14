@@ -48,6 +48,9 @@
                 .container {width: 100%; max-width: 1440px; margin: 0 auto; display: flex;}
                 .items-center {align-items: center;}
                 .justify-between {justify-content: space-between;}
+
+                .w-full {width: 100%;} 
+                .text-center {text-align: center;}
                
                 .button-primary-white {background: white; border: 1px solid #D0D5DD; border-radius: 6px; display: flex; align-items: center; padding: 6px 12px; gap: 6px; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer; outline: none; color: #101828; box-shadow: 0px 1px 2px 0px #10182814;}
                 .button-primary-blue {background: var(--colour-blue); border: none; border-radius: 6px; display: flex; align-items: center; padding: 6px 12px; gap: 6px; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer; outline: none; color: white; box-shadow: 0px 1px 2px 0px #10182814;}
@@ -81,7 +84,7 @@
 
 
 
-                .screen {height: 100vh; overflow: hidden; font-family: sans-serif; letter-spacing: 0px;}
+                .screen {height: 100vh; overflow: hidden; font-family: sans-serif; letter-spacing: 0px; background: #0E1628;}
         
                 .screen .screen-header {height: var(--navbar-height); width: 100%; background: #0E1628; color: white; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; box-sizing: border-box;}
                 .screen .screen-header .screen-header-left {display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 12px;} 
@@ -103,7 +106,7 @@
                 .screen .screen-header .header-menu-tertiary li svg {opacity: 1;}
                 
                 .screen .screen-body {display: flex; height: calc(100% - var(--navbar-height));}
-                .screen .screen-body .side-panel {width: var(--side-panel-width); padding: 10px 20px; display: flex; flex-flow: column; justify-content: space-between;}
+                .screen .screen-body .side-panel {background: white; width: var(--side-panel-width); padding: 10px 20px; display: flex; flex-flow: column; justify-content: space-between;}
                 .screen .screen-body .side-panel .main-menu {margin: 0; padding: 0; list-style: none; display: flex; flex-flow: column; gap: 2px; overflow: auto; overflow-x: hidden;}
         
                 .screen .screen-body .side-panel .main-menu li {display: flex; flex-flow: column; width: 100%; position: relative;}
@@ -157,7 +160,7 @@
                 
                 .screen .screen-body .main-panel .panel-body .detail-row {width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 24px;}
 
-                .screen .screen-body .main-panel .panel-body .detail-block {width: 400px; height: 400px; overflow: auto; overflow-x: hidden; text-align: center; background: white; border-radius: 6px; padding: 20px; box-shadow: 0px 1px 2px 0px #10182814;}
+                .screen .screen-body .main-panel .panel-body .detail-block {position: relative; width: 400px; height: 400px; overflow: auto; overflow-x: hidden; text-align: center; background: white; border-radius: 6px; padding: 20px; box-shadow: 0px 1px 2px 0px #10182814;}
                 .screen .screen-body .main-panel .panel-body .detail-block h2 {text-align: left; margin-bottom: 24px; font-size: 18px; line-height: 28px; color: #1D2939;}
 
                 .screen .screen-body .main-panel .panel-body .detail-block.with-icon {width: calc(33% - 38px); height: auto;display: flex; flex-flow: column; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 20px;}
@@ -166,6 +169,9 @@
                 .screen .screen-body .main-panel .panel-body .detail-block.with-icon .detail-number {font-size: 24px; line-height: 32px; font-weight: 600; color: #1D2939;}
                 .screen .screen-body .main-panel .panel-body .detail-block.with-icon .detail-progress-bar {width: 100%; height: 8px; background: #EAECF0; border-radius: 6px; position: relative;}
                 .screen .screen-body .main-panel .panel-body .detail-block.with-icon .detail-progress-bar span {position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: #0158D2; border-radius: 6px; -webkit-animation: 1s animation-lightspeed-in ease forwards; animation: 1s animation-lightspeed-in ease forwards;}
+
+                .screen .screen-body .main-panel .panel-body .detail-block.with-icon .detail-block-more-button {position: absolute; right: 20px; top: 20px; width: 20px; height: 20px; background: none; border: none; outline: none; cursor: pointer; display: flex; flex-flow: column; gap: 2px;}
+                .screen .screen-body .main-panel .panel-body .detail-block.with-icon .detail-block-more-button span {width: 3px; height: 3px; display: block; border-radius: 50%; background: #98A2B3;}
 
                 .screen .screen-body .main-panel .panel-body .detail-block.full-block {width: 100%; height: auto;}
                 
@@ -196,7 +202,7 @@
                 .table-filter-row .table-search svg {}
                 .table-filter-row .table-search input {}
 
-                .table-filter-row .table {width: 100%; display: flex; flex-flow: column; align-items: baseline; justify-content: flex-start; border-radius: 12px; box-shadow: 0px 1px 2px 0px #10182814;}
+                .table-filter-row .table {width: 100%; display: flex; flex-flow: column; align-items: baseline; justify-content: flex-start; border-radius: 12px; box-shadow: 0px 1px 2px 0px #10182814; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;}
                 .table-filter-row .table .table-head {width: 100%; display: flex; align-items: center; justify-content: space-between; justify-content: space-between; background: white; padding: 20px 12px 6px 24px; box-sizing: border-box; border-top-left-radius: 12px; border-top-right-radius: 12px;}
                 .table-filter-row .table .table-head .date-selector {display: flex; align-items: center; justify-content: flex-start;}
                 .table-filter-row .table .table-head .date-selector h2 {font-size: 18px; line-height: 28px; color: #1D2939; display: flex; align-items: center; justify-content: flex-start; gap: 12px; margin-right: 12px;}
@@ -215,17 +221,22 @@
                 .table-filter-row .table .table-head .table-buttons-wrapper button.export-btn svg {}
                 .table-filter-row .table .table-head .table-buttons-wrapper button.export-btn p {}
 
-                .table-filter-row .table .table-body {width: 100%; display: flex; flex-flow: column; color: #475467;}
+                .table-filter-row .table .table-body {width: 100%; display: flex; flex-flow: column; color: #475467; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;}
                 .table-filter-row .table .table-body .table-header-row {width: 100%; display: flex; justify-content: space-between; padding: 12px; box-sizing: border-box; gap: 6px;}
                 .table-filter-row .table .table-body .table-header-row .table-header-cell {display: flex; align-items: center; justify-content: flex-start; gap: 6px;}
-                .table-filter-row .table .table-body .table-header-row .table-header-cell p {}
+                .table-filter-row .table .table-body .table-header-row .table-header-cell p {font-family: system-ui;}
                 .table-filter-row .table .table-body .table-header-row .table-header-cell p.strong {font-weight: 600;}
                 .table-filter-row .table .table-body .table-header-row .table-header-cell svg {width: 14px; height: 14px; cursor: pointer;}
                 .table-filter-row .table .table-body .table-row {display: flex; align-items: center; justify-content: space-between; padding: 12px; box-sizing: border-box; gap: 6px;}
                 .table-filter-row .table .table-body .table-row.odd {background: white;}
                 .table-filter-row .table .table-body .table-row.even {}
+                .table-filter-row .table .table-body .table-row:last-child {border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;}
                 .table-filter-row .table .table-body .table-row .table-cell {display: flex; align-items: center; justify-content: flex-start; gap: 12px;}
                 .table-filter-row .table .table-body .table-row .table-cell:first-child {justify-content: flex-end;}
+                .table-filter-row .table .table-body .table-row .table-cell.justify-start:first-child {justify-content: flex-start;}
+                .table-filter-row .table .table-body .table-row .table-cell button.cell-opener-button {cursor: pointer; width: 20px; height: 20px; border: none; background: none; outline: none; display: flex; align-items: center; justify-content: center;}
+                .table-filter-row .table .table-body .table-row .table-cell button.cell-opener-button span {width: 6px; height: 6px; border-left: 2px solid #344054; border-bottom: 2px solid #344054; position: relative; top: -2px; transform: rotate(225deg);}
+                .table-filter-row .table .table-body .table-row .table-cell button.cell-opener-button.active span {transform: rotate(-45deg);}
 
                 .table-filter-row .table .table-body .table-row .table-cell p {}
                 .table-filter-row .table .table-body .table-row .table-cell p.strong {font-weight: 600;}
@@ -248,9 +259,17 @@
                 .cellwidth-12 {width: 18%; max-width: 202px;}
 
                 .cellwidth-13 {width: 26%; max-width: 282px;}
-                .cellwidth-14 {width: 27.5%; max-width: 311px;}
+                .cellwidth-14 {width: 29.5%; max-width: 312px;}
                 .cellwidth-15 {width: 26%; max-width: 195px;}
                 .cellwidth-16 {width: 21.5%; max-width: 244px;}
+
+                .cellwidth-17 {width: 3.2%; max-width: 35px;}
+                .cellwidth-18 {width: 29%; max-width: 304px;}
+                .cellwidth-19 {width: 10.4%; max-width: 117px;}
+                .cellwidth-20 {width: 9.6%; max-width: 108px;}
+                .cellwidth-21 {width: 16.7%; max-width: 188px;}
+                .cellwidth-22 {width: 7.8%; max-width: 88px;}
+                .cellwidth-23 {width: 17.2%; max-width: 193px;}
 
             </style>
 
@@ -264,7 +283,7 @@
                 @keyframes bake-pie {from {transform: rotate(0deg) translate3d(0, 0, 0);}}
                 .pie-chart {font-family: "Open Sans", Arial;}
                 .pie-chart .pie-chart-total-p {position: absolute; top: calc(50% - 30px); left: 0; width: 100%; text-align: center; z-index: 9; font-size: 18px; line-height: 28px;}
-                .pie-chart .pie-chart-total-p span {display: block; font-size: 35px; line-height: 4px; position: relative; top: 14px;}
+                .pie-chart .pie-chart-total-p span {display: block; font-size: 35px; line-height: 48px; position: relative; top: -6px;}
                 .pie-chart--wrapper h2 {}
                 .pie-chart--wrapper {}
                 .pie-chart__pie, .pie-chart__legend {display: inline-block; vertical-align: top;}
@@ -611,6 +630,11 @@
 
                         <div class="detail-row">
                             <div class="detail-block with-icon">
+                                <button class="detail-block-more-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path fill="white" d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>
                                 <p>
                                     Number of outstanding work order requests
@@ -1649,7 +1673,218 @@
                                     <p>Add an asset</p>
                                 </button>
                             </div>
-                        </div>                
+                        </div>            
+                        <div class="panel-body">
+                            <div class="table-filter-row">
+                                <div class="table-filters">
+                                    <div class="dropdown-wrapper filter-button-with-dropdown">
+                                        <button class="dropdown-btn filter-btn">
+                                            <p>Status</p>
+                                            <span></span>
+                                        </button>
+                                        <div class="dropdown-dropdown filter-dropdown">
+                                            <p class="dropdown-dropdown-legend">Filter by status</p>
+                                            <ul>
+                                                <li>
+                                                    <p>Open</p>
+                                                    <span></span>
+                                                </li>
+                                                <li>
+                                                    <p>In progress</p>
+                                                    <span></span>
+                                                </li>
+                                                <li>
+                                                    <p>Completed</p>
+                                                    <span></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-wrapper filter-button-with-dropdown">
+                                        <button class="dropdown-btn filter-btn">
+                                            <p>Category</p>
+                                            <span></span>
+                                        </button>
+                                        <div class="dropdown-dropdown filter-dropdown">
+                                            <p class="dropdown-dropdown-legend">Filter by category</p>
+                                            <ul>
+                                                <li>
+                                                    <p>Category 1</p>
+                                                    <span></span>
+                                                </li>
+                                                <li>
+                                                    <p>Category 2</p>
+                                                    <span></span>
+                                                </li>
+                                                <li>
+                                                    <p>Category 3</p>
+                                                    <span></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-wrapper filter-button-with-dropdown">
+                                        <button class="dropdown-btn filter-btn">
+                                            <p>Group</p>
+                                            <span></span>
+                                        </button>
+                                        <div class="dropdown-dropdown filter-dropdown">
+                                            <p class="dropdown-dropdown-legend">Filter by group</p>
+                                            <ul>
+                                                <li>
+                                                    <p>Group 1</p>
+                                                    <span></span>
+                                                </li>
+                                                <li>
+                                                    <p>Group 2</p>
+                                                    <span></span>
+                                                </li>
+                                                <li>
+                                                    <p>Group 3</p>
+                                                    <span></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="search-input-wrapper table-search">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>
+                                    <input type="text" placeholder="Search">                                    
+                                </div>
+                            </div>
+                            <div class="table-filter-row">
+                                <div class="table">
+
+                                    <div class="table-head">
+                                        <div class="date-selector">
+                                            <h2></h2>
+                                        </div>
+                                        <div class="table-buttons-wrapper">
+                                            <button class="button-primary-white export-btn">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>
+                                                <p>Export</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-body">
+                                        <div class="table-header-row">
+                                            <div class="table-header-cell cellwidth-17"></div>
+                                            <div class="table-header-cell cellwidth-18">
+                                                <p>Name</p>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>                                             
+                                            </div>
+                                            <div class="table-header-cell cellwidth-19">
+                                                <p>ID</p>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>                                             
+                                            </div>
+                                            <div class="table-header-cell cellwidth-20">
+                                                <p>Criticality</p>
+                                            </div>
+                                            <div class="table-header-cell cellwidth-21">
+                                                <p>Maintenance Strategy</p>
+                                            </div>
+                                            <div class="table-header-cell cellwidth-22">
+                                                <p>Make</p>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>                                             
+                                            </div>
+                                            <div class="table-header-cell cellwidth-22">
+                                                <p>Model</p>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>                                             
+                                            </div>
+                                            <div class="table-header-cell cellwidth-23">
+                                                <p>Group</p>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon-xl-heavy"><path d="M15.6729 3.91287C16.8918 2.69392 18.8682 2.69392 20.0871 3.91287C21.3061 5.13182 21.3061 7.10813 20.0871 8.32708L14.1499 14.2643C13.3849 15.0293 12.3925 15.5255 11.3215 15.6785L9.14142 15.9899C8.82983 16.0344 8.51546 15.9297 8.29289 15.7071C8.07033 15.4845 7.96554 15.1701 8.01005 14.8586L8.32149 12.6785C8.47449 11.6075 8.97072 10.615 9.7357 9.85006L15.6729 3.91287ZM18.6729 5.32708C18.235 4.88918 17.525 4.88918 17.0871 5.32708L11.1499 11.2643C10.6909 11.7233 10.3932 12.3187 10.3014 12.9613L10.1785 13.8215L11.0386 13.6986C11.6812 13.6068 12.2767 13.3091 12.7357 12.8501L18.6729 6.91287C19.1108 6.47497 19.1108 5.76499 18.6729 5.32708ZM11 3.99929C11.0004 4.55157 10.5531 4.99963 10.0008 5.00007C9.00227 5.00084 8.29769 5.00827 7.74651 5.06064C7.20685 5.11191 6.88488 5.20117 6.63803 5.32695C6.07354 5.61457 5.6146 6.07351 5.32698 6.63799C5.19279 6.90135 5.10062 7.24904 5.05118 7.8542C5.00078 8.47105 5 9.26336 5 10.4V13.6C5 14.7366 5.00078 15.5289 5.05118 16.1457C5.10062 16.7509 5.19279 17.0986 5.32698 17.3619C5.6146 17.9264 6.07354 18.3854 6.63803 18.673C6.90138 18.8072 7.24907 18.8993 7.85424 18.9488C8.47108 18.9992 9.26339 19 10.4 19H13.6C14.7366 19 15.5289 18.9992 16.1458 18.9488C16.7509 18.8993 17.0986 18.8072 17.362 18.673C17.9265 18.3854 18.3854 17.9264 18.673 17.3619C18.7988 17.1151 18.8881 16.7931 18.9393 16.2535C18.9917 15.7023 18.9991 14.9977 18.9999 13.9992C19.0003 13.4469 19.4484 12.9995 20.0007 13C20.553 13.0004 21.0003 13.4485 20.9999 14.0007C20.9991 14.9789 20.9932 15.7808 20.9304 16.4426C20.8664 17.116 20.7385 17.7136 20.455 18.2699C19.9757 19.2107 19.2108 19.9756 18.27 20.455C17.6777 20.7568 17.0375 20.8826 16.3086 20.9421C15.6008 21 14.7266 21 13.6428 21H10.3572C9.27339 21 8.39925 21 7.69138 20.9421C6.96253 20.8826 6.32234 20.7568 5.73005 20.455C4.78924 19.9756 4.02433 19.2107 3.54497 18.2699C3.24318 17.6776 3.11737 17.0374 3.05782 16.3086C2.99998 15.6007 2.99999 14.7266 3 13.6428V10.3572C2.99999 9.27337 2.99998 8.39922 3.05782 7.69134C3.11737 6.96249 3.24318 6.3223 3.54497 5.73001C4.02433 4.7892 4.78924 4.0243 5.73005 3.54493C6.28633 3.26149 6.88399 3.13358 7.55735 3.06961C8.21919 3.00673 9.02103 3.00083 9.99922 3.00007C10.5515 2.99964 10.9996 3.447 11 3.99929Z" fill="currentColor"></path></svg>                                             
+                                            </div>
+                                        </div>
+                                        <div class="table-row odd">
+                                            <div class="table-cell cellwidth-17 justify-start">
+                                                <button class="cell-opener-button">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="table-cell cellwidth-18">
+                                                <p class="strong">Fresh water system</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-19">
+                                                <p>#380077</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-20">
+                                                <p>Low</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-21">
+                                                <p>Run to failure</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-23">
+                                                <p>Product line 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-row even">
+                                            <div class="table-cell cellwidth-17 justify-start">
+                                                <button class="cell-opener-button">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="table-cell cellwidth-18">
+                                                <p class="strong">Steel Propane Tank - 20Lb</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-19">
+                                                <p>#12008</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-20">
+                                                <p>Medium</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-21">
+                                                <p>Time-based</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-23">
+                                                <p>Product line 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="table-row odd">
+                                            <div class="table-cell cellwidth-17 justify-start">
+                                                <button class="cell-opener-button">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="table-cell cellwidth-18">
+                                                <p class="strong">Forklift - GP15-35(C)N - Compact LPG</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-19">
+                                                <p>#145632</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-20">
+                                                <p>High</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-21">
+                                                <p>Run to failure</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-23">
+                                                <p>Warehouse equipment</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>                              
                     </div>
 
 
@@ -1741,7 +1976,8 @@
                     .modal {width: 630px; max-width: 100%; height: auto; min-height: 400px; max-height: 100%; overflow: auto; overflow-x: hidden; background: white; display: flex; border-radius: 6px; flex-flow: column;}
                     .modal-header {width: 100%; display: flex; align-items: center; justify-content: space-between; height: var(--navbar-height); padding: 12px 6px 12px 20px; border-bottom: 1px solid #EAECF0; box-sizing: border-box;}
                     .modal-header h3 {font-size: 18px; line-height: 28px; color: #1D2939;}
-                    .modal-header svg {width: 44px; height: 44px; padding: 12px; box-sizing: border-box; cursor: pointer;}
+                    .modal-header svg {width: 44px; height: 44px; padding: 12px; border-radius: 6px; box-sizing: border-box; cursor: pointer; transition: 0.3s background ease-in-out; background: #FFFFFF;}
+                    .modal-header svg:hover {background: #F9FAFB;}
 
                     .modal-body {width: 100%; max-height: calc(100% - var(--navbar-height));}
                 </style>
