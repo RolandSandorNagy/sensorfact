@@ -32,7 +32,7 @@
                     --colour-8: #d6d6d6;
 
                     --navbar-height: 64px;
-                    --side-panel-width: 280px;
+                    --side-panel-width: 270px;
                     --logo-width: 200px;
                     --logo-height: 40px;
                 }
@@ -227,7 +227,7 @@
                 .table-filter-row .table .table-body .table-header-row .table-header-cell p {font-family: system-ui;}
                 .table-filter-row .table .table-body .table-header-row .table-header-cell p.strong {font-weight: 600;}
                 .table-filter-row .table .table-body .table-header-row .table-header-cell svg {width: 14px; height: 14px; cursor: pointer;}
-                .table-filter-row .table .table-body .table-row {display: flex; align-items: center; justify-content: space-between; padding: 12px; box-sizing: border-box; gap: 6px;}
+                .table-filter-row .table .table-body .table-row {display: flex; align-items: center; justify-content: space-between; padding: 12px; box-sizing: border-box; gap: 6px; position: relative; transition: padding 0.2s ease-in-out;}
                 .table-filter-row .table .table-body .table-row.odd {background: white;}
                 .table-filter-row .table .table-body .table-row.even {}
                 .table-filter-row .table .table-body .table-row:last-child {border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;}
@@ -236,7 +236,8 @@
                 .table-filter-row .table .table-body .table-row .table-cell.justify-start:first-child {justify-content: flex-start;}
                 .table-filter-row .table .table-body .table-row .table-cell button.cell-opener-button {cursor: pointer; width: 20px; height: 20px; border: none; background: none; outline: none; display: flex; align-items: center; justify-content: center;}
                 .table-filter-row .table .table-body .table-row .table-cell button.cell-opener-button span {width: 6px; height: 6px; border-left: 2px solid #344054; border-bottom: 2px solid #344054; position: relative; top: -2px; transform: rotate(225deg);}
-                .table-filter-row .table .table-body .table-row .table-cell button.cell-opener-button.active span {transform: rotate(-45deg);}
+                .table-filter-row .table .table-body .table-row.active .table-cell button.cell-opener-button span {transform: rotate(-45deg); left: 2px}
+                .table-filter-row .table .table-body .table-row .table-cell-sublist {position: absolute; top: 100%; left: 0; width: 100%; height: auto; height: 200px;}
 
                 .table-filter-row .table .table-body .table-row .table-cell p {}
                 .table-filter-row .table .table-body .table-row .table-cell p.strong {font-weight: 600;}
@@ -1824,6 +1825,7 @@
                                             <div class="table-cell cellwidth-23">
                                                 <p>Product line 1</p>
                                             </div>
+                                            <div class="table-cell-sublist"></div>
                                         </div>
                                         <div class="table-row even">
                                             <div class="table-cell cellwidth-17 justify-start">
@@ -1852,6 +1854,7 @@
                                             <div class="table-cell cellwidth-23">
                                                 <p>Product line 1</p>
                                             </div>
+                                            <div class="table-cell-sublist"></div>
                                         </div>
                                         <div class="table-row odd">
                                             <div class="table-cell cellwidth-17 justify-start">
@@ -1880,7 +1883,67 @@
                                             <div class="table-cell cellwidth-23">
                                                 <p>Warehouse equipment</p>
                                             </div>
+                                            <div class="table-cell-sublist"></div>
                                         </div>
+                                        <div class="table-row even">
+                                            <div class="table-cell cellwidth-17 justify-start">
+                                                <button class="cell-opener-button">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="table-cell cellwidth-18">
+                                                <p class="strong">Palletizer A</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-19">
+                                                <p>#582749</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-20">
+                                                <p>High</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-21">
+                                                <p>Run to failure</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-23">
+                                                <p>Product line 1</p>
+                                            </div>
+                                            <div class="table-cell-sublist"></div>
+                                        </div>
+                                        <div class="table-row odd">
+                                            <div class="table-cell cellwidth-17 justify-start">
+                                                <button class="cell-opener-button">
+                                                    <span></span>
+                                                </button>
+                                            </div>
+                                            <div class="table-cell cellwidth-18">
+                                                <p class="strong">Wrapper - Orion Model A</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-19">
+                                                <p>#164287</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-20">
+                                                <p>Medium</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-21">
+                                                <p>Predictive maintenance</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-22">
+                                                <p class="w-full text-center">-</p>
+                                            </div>
+                                            <div class="table-cell cellwidth-23">
+                                                <p>Warehouse equipment</p>
+                                            </div>
+                                            <div class="table-cell-sublist"></div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>                            
@@ -2135,6 +2198,7 @@
                     addModalWrapperCloserListener();
                     addGlobalDropdownOpenerListener();
                     addGlobalCloserListener();
+                    addTableCellOpenerListener();
                 });
         
         
@@ -2151,11 +2215,7 @@
                                 return false;
                             }
         
-                            if(hasClass(this, 'active')) {
-                                removeClass(this, 'active');
-                            } else {
-                                addClass(this, 'active');
-                            }
+                            toggleClass(this, 'active');
                         });
                     }
                 }
@@ -2243,11 +2303,7 @@
                     for(let i = 0; i < primary_lis.length; ++i) {
                         const primary_li = primary_lis[i];
                         primary_li.addEventListener('click', function (event) {
-                            if(hasClass(this, 'active')) {
-                                removeClass(this, 'active');
-                            } else {
-                                addClass(this, 'active');
-                            }
+                            toggleClass(this, 'active');
                         });
                     }
                 }
@@ -2341,6 +2397,30 @@
                     });
                 }
 
+                function addTableCellOpenerListener() {
+                    const cell_opener_buttons = _$('.cell-opener-button');
+                    for(let i = 0; i < cell_opener_buttons.length; ++i) {
+                        const cell_opener_button = cell_opener_buttons[i];
+                        cell_opener_button.addEventListener('click', function (event) {
+                            const table_row = this.closest('.table-row');
+                            const had_class = hasClass(table_row, 'active');
+                            const table_cell_sublist = table_row.querySelector('.table-cell-sublist');
+                            const table_cell_sublist_h = table_cell_sublist.clientHeight;
+
+                            toggleClass(table_row, 'active');
+                            if(had_class) {
+                                table_row.style.paddingBottom = '';
+                                table_cell_sublist.style.top = '';
+                            } else {
+                                table_row.style.paddingBottom = table_cell_sublist_h + 'px';            
+                                table_cell_sublist.style.top = 'calc(100% - ' + 
+                    table_cell_sublist_h + 'px)';
+                            }
+                            
+                        });
+                    }                    
+                }
+
             </script>
        
        
@@ -2369,6 +2449,13 @@
                         return elem.className.indexOf(className) > -1;
                     }
                     return false;
+                }
+                function toggleClass(elem, className) {
+                    if(hasClass(elem, className)) {
+                        removeClass(elem, className);
+                    } else {
+                        addClass(elem, className);
+                    }
                 }
             </script>
 
