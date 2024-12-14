@@ -567,7 +567,7 @@
                         <div class="panel-body">
 
                             <style>
-                                .table-filter-row {width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 12px 0;}
+                                .table-filter-row {width: 100%; display: flex; align-items: end; justify-content: space-between; padding: 0;}
                                 .table-filter-row .table-filters {display: flex; align-items: center; justify-content: flex-start; gap: 12px;}
                                 .table-filter-row .table-filters .filter-button-with-dropdown {position: relative;}
                                 .table-filter-row .table-filters .filter-button-with-dropdown .filter-btn {background: white; border-radius: 6px; border: 1px solid #D0D5DD; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0px 1px 2px 0px #10182814; cursor: pointer;}
@@ -639,15 +639,42 @@
                                 .table-filter-row .table .table-head .table-buttons-wrapper button.export-btn {}
                                 .table-filter-row .table .table-head .table-buttons-wrapper button.export-btn svg {}
                                 .table-filter-row .table .table-head .table-buttons-wrapper button.export-btn p {}
-                                .table-filter-row .table .table-body {}
-                                .table-filter-row .table .table-body .table-header-row {}
-                                .table-filter-row .table .table-body .table-header-row .table-header-cell {}
+
+                                .table-filter-row .table .table-body {    width: 100%;
+    display: flex
+;
+    flex-flow: column;
+    color: #475467;}
+                                .table-filter-row .table .table-body .table-header-row {    width: 100%;
+    display: flex
+;
+    justify-content: space-between;
+    padding: 12px;
+    box-sizing: border-box;
+}
+                                .table-filter-row .table .table-body .table-header-row .table-header-cell {display: flex
+;
+    align-items: center;
+    justify-content: flex-start;
+gap: 6px;}
                                 .table-filter-row .table .table-body .table-header-row .table-header-cell p {}
-                                .table-filter-row .table .table-body .table-header-row .table-header-cell p.strong {}
-                                .table-filter-row .table .table-body .table-header-row .table-header-cell svg {}
-                                .table-filter-row .table .table-body .table-row {}
-                                .table-filter-row .table .table-body .table-row .table-cell {}
-                                .table-filter-row .table .table-body .table-row .table-cell p {}
+                                .table-filter-row .table .table-body .table-header-row .table-header-cell p.strong {font-weight: 600;}
+                                .table-filter-row .table .table-body .table-header-row .table-header-cell svg {    width: 14px;
+                                    height: 14px;}
+                                .table-filter-row .table .table-body .table-row {    display: flex
+;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    box-sizing: border-box;}
+                                .table-filter-row .table .table-body .table-row.odd {    background: white;
+                                }
+                                .table-filter-row .table .table-body .table-row.even {}
+                                .table-filter-row .table .table-body .table-row .table-cell {    display: flex
+;
+    align-items: center;
+    justify-content: flex-start;}
+                                .table-filter-row .table .table-body .table-row .table-cell p {font-weight: 600;}
                                 .table-filter-row .table .table-body .table-row .table-cell p.strong {}
                                 .table-filter-row .table .table-body .table-row .table-cell svg {}
 
