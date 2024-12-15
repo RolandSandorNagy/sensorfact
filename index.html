@@ -317,6 +317,18 @@
                 .cellwidth-34 {width: 41.1%; max-width: 462px;}
                 .cellwidth-35 {width: 10.3%; max-width: 116px;}
 
+
+
+                .panel-body-tab-headers {width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 24px; border-bottom: 1px solid #EAECF0;}
+                .panel-body-tab-headers .panel-body-tab-header {padding: 12px 0; cursor: pointer;}
+                .panel-body-tab-headers .panel-body-tab-header.active {/*border-bottom: 2px solid #0158D2;*/ box-shadow: 0 2px 0 0 #0158D2;}
+                .panel-body-tab-headers .panel-body-tab-header p {font-size: 14px; line-height: 20px; color: #667085;}    
+                .panel-body-tab-headers .panel-body-tab-header.active p {color: #3187FF;}
+                .panel-body-tabs {}
+                .panel-body-tabs .panel-body-tab {display: none;}
+                .panel-body-tabs .panel-body-tab.active {display: flex;}
+                .panel-body-tabs .panel-body-tab p {}
+
             </style>
 
 
@@ -3531,7 +3543,25 @@
                             <h1>Analysis</h1>                        
                             <div class="panel-header-buttons">
                             </div>
-                        </div>                
+                        </div>     
+                        <div class="panel-body">
+                            <div class="panel-body-tab-headers">
+                                <div class="panel-body-tab-header active" data-tab="asset-analysis">
+                                    <p>Asset analysis</p>
+                                </div>
+                                <div class="panel-body-tab-header" data-tab="employee-analysis">
+                                    <p>Employee analysis</p>
+                                </div>        
+                            </div>
+                            <div class="panel-body-tabs">
+                                <div class="panel-body-tab active" data-tab="asset-analysis">
+                                    TAB 1
+                                </div>
+                                <div class="panel-body-tab" data-tab="employee-analysis">
+                                    TAB 2
+                                </div>        
+                            </div>
+                        </div>
                     </div>
 
 
@@ -3821,6 +3851,7 @@
                     addGlobalCloserListener();
                     addTableCellOpenerListener();
                     addQuantitySelectorListener();                    
+                    addPanelBodyTabSelectorListener();
                 });
         
         
@@ -4063,8 +4094,42 @@
                     }                
                 }                
 
+                function addPanelBodyTabSelectorListener() {
+                    const panel_body_tab_headers = _$('.panel-body-tab-headers .panel-body-tab-header');
+                    for(let i = 0; i < panel_body_tab_headers.length; ++i) {
+                        const panel_body_tab_header = panel_body_tab_headers[i];
+                        panel_body_tab_header.addEventListener('click', function (event) {
+                            const tab_name = this.dataset.tab;
+                            const target_tab = _$_('.panel-body-tabs .panel-body-tab[data-tab="' + tab_name + '"]');
+                            for(let j = 0; j < panel_body_tab_headers.length; ++j) {
+                                const _panel_body_tab_header = panel_body_tab_headers[j];
+                                removeClass(_panel_body_tab_header, 'active');
+                            }            
+                            addClass(this, 'active')
+                            const panel_body_tabs = _$('.panel-body-tabs .panel-body-tab');
+                            for(let j = 0; j < panel_body_tabs.length; ++j) {
+                                const panel_body_tab = panel_body_tabs[j];
+                                removeClass(panel_body_tab, 'active');
+                            }            
+                            addClass(target_tab, 'active')
+                        });
+                    }                
+                }                
+
             </script>
        
+
+
+
+
+
+
+
+
+
+
+
+
        
             <script>
                 function _$(query) {
