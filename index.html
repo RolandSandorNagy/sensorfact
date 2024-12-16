@@ -4258,8 +4258,14 @@
                             const language_button = _$_('.language-button');
                             removeClass(language_button, 'active');
                         }
-                        if(!hasClass(event.target, 'dropdown-btn')) {
-                            clearCloneDropdowns();
+                        target = event.target;
+                        if(!hasClass(target, 'dropdown-btn')) {
+                            while(target && (!target.classList || !hasClass(target, 'dropdown-dropdown'))) {
+                                target = target.parentNode;
+                            }
+                            if(!target) {
+                                clearCloneDropdowns();
+                            }
                         }
                     });
                 }
