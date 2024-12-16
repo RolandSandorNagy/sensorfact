@@ -3956,9 +3956,8 @@
                     }
                 }
 
-//data-value="Completed" data-target="status-3"                    
                 function globalDropdownOptionListener(option) {
-                    const dropdown_options = _$('.dropdown-dropdown ul li');
+                    const dropdown_options = option.closest('ul').querySelectorAll('li');
                     for(let j = 0; j < dropdown_options.length; ++j) {
                         const _dropdown_option = dropdown_options[j];
                         removeClass(_dropdown_option, 'active');
