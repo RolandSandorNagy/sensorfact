@@ -4025,7 +4025,6 @@
                 ready(function () { 
                     addLanguageButtonListener();
                     addLanguageOptionListener();
-                    //addLanguageSearchListener();            
                     addGlobalSearchListener();            
                     addPanelChangeListener();
                     addHeaderPrimaryMenuListener();
@@ -4077,31 +4076,6 @@
                     }
                 }
         
-                function addLanguageSearchListener() {
-                    const languages_search_input = _$_('.screen .screen-body .side-panel .languages-slide-in-panel .languages-search-input input');
-                    if(languages_search_input) {
-                        languages_search_input.addEventListener('keyup', function (event) {
-                            const keyword = this.value.toLowerCase();
-                            const lis = _$('.screen .screen-body .side-panel .languages-slide-in-panel ul li');
-                            for(let i = 0; i < lis.length; ++i) {
-                                const li = lis[i];
-                                const p = li.querySelector('p');
-                                const p_text = p.innerText.toLowerCase();
-                                if(!keyword) {
-                                    li.style.display = '';
-                                } else {
-                                    const p_has_keyword = p_text.indexOf(keyword) > -1;
-                                    if(p_has_keyword || (li.className && hasClass(li, 'active'))) {
-                                        li.style.display = '';
-                                    } else {
-                                        li.style.display = 'none';
-                                    }
-                                }
-                            }
-                        });
-                    }
-                }
-
                 function addGlobalSearchListener() {
                     const search_inputs = _$('.screen .search-input-wrapper input');
                     for(let i = 0; i < search_inputs.length; ++i) {
