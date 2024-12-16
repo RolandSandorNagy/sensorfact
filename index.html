@@ -4184,6 +4184,8 @@
                         dropdown_btn.addEventListener('click', function (event) {
                             const in_table = this.dataset.inTable;
                             if(in_table) {
+                                clearCloneDropdowns();
+
                                 const this_rect = this.getBoundingClientRect();
                                 const table = this.closest('.table');
                                 const table_rect = table.getBoundingClientRect();
@@ -4243,15 +4245,19 @@
                             removeClass(language_button, 'active');
                         }
                         if(!hasClass(event.target, 'dropdown-btn')) {
-                            const dropdown_clones = _$('.dropdown-clone');
-                            for(let i = 0; i < dropdown_clones.length; ++i) {
-                                const dropdown_clone = dropdown_clones[i];
-                                if(dropdown_clone.parentNode) {
-                                    dropdown_clone.parentNode.removeChild(dropdown_clone);
-                                }
-                            }
+                            clearCloneDropdowns();
                         }
                     });
+                }
+
+                function clearCloneDropdowns() {
+                    const dropdown_clones = _$('.dropdown-clone');
+                    for(let i = 0; i < dropdown_clones.length; ++i) {
+                        const dropdown_clone = dropdown_clones[i];
+                        if(dropdown_clone.parentNode) {
+                            dropdown_clone.parentNode.removeChild(dropdown_clone);
+                        }
+                    }
                 }
 
                 function addTableCellOpenerListener() {
