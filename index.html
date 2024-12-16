@@ -4240,9 +4240,11 @@
                                 addClass(clone_dropdown, 'dropdown-clone');
 
                                 const search_input = clone_dropdown.querySelector('.search-input-wrapper input');
-                                search_input.addEventListener('keyup', function (event) {
-                                    globalSearchListenerHandler(this);
-                                });
+                                if(search_input) {
+                                    search_input.addEventListener('keyup', function (event) {
+                                        globalSearchListenerHandler(this);
+                                    });
+                                }
 
                                 const table_left = table_rect.left;
                                 const table_top = table_rect.top;
