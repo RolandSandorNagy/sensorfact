@@ -3968,6 +3968,12 @@
 
                 function globalDropdownOptionListener(option) {
                     const dropdown = option.closest('.dropdown-dropdown');
+                    const dropdown_btn = dropdown.querySelector('.dropdown-btn')
+                    if(dropdown_btn) {
+                        const in_table = dropdown_btn.dataset.inTable;
+                    } else {
+                        const in_table = false;
+                    }
                     const dropdown_options = option.closest('ul').querySelectorAll('li');
                     const panel_body = option.closest('.panel-body');
                     const table_row = panel_body.querySelector('.table-row[data-row="' + dropdown.dataset.row + '"]');
@@ -3994,12 +4000,12 @@
                         if(target_elem && value) {
                             target_elem.innerText = value; 
                         }
-                        if(value.toLowerCase() == 'completed') {
+                        if(in_table && value.toLowerCase() == 'completed') {
                             addClass(target_elem, 'success')
                         } else {
                             removeClass(target_elem, 'success')
                         }
-                        if(value.toLowerCase() == 'unassigned') {
+                        if(in_table && value.toLowerCase() == 'unassigned') {
                             addClass(target_elem, 'danger')
                         } else {
                             removeClass(target_elem, 'danger')
